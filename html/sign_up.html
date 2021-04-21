@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	input{height:24px; width:200px; font-size:15px}
+	td{font-size:18px; padding:5px}
+	tr{padding:10px 0 10px 0}
+</style>
+<script type="text/javascript" language="javascript" src="../js/sign_up.js">
+
+</script>
+<title>Sign up</title>
+</head>
+
+<body background="../images/bg.jpg" style="height:100%">
+	<div style="height:1100px; width:800px; margin:0px auto; border-radius:8px; border:2px solid;">
+    	<div style="float:left; width:400px;">
+        <table style="margin-left:30px">
+        <caption><h2>Sign Up</h2></caption>
+        <form name="Sign_up" action="../php/sign_up.php" method="post">
+        <tr>
+        <td>First Name</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><input type="text" name="fname" id="fname" onChange="fnamec()"></td>
+        <td id="fnamec" style="color:red; text-align:left"><img id="fpic" src="../images/bg2.jpg"/></td>
+        </tr>
+        <tr>
+        <td>Last Name</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><input type="text" name="lname"  id="lname" onChange="lnamec()"></td>
+        <td id="lnamec"><img id="lpic" src="../images/bg2.jpg"/></td>
+        </tr>
+        <tr>
+        <td>Telephone</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><input type="text" name="tel"></td>
+        <td></td>
+        </tr>
+        <tr>
+        <tr>
+        <td>E-mail</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><input type="text" name="email" id="email" onChange="emailc()"></td>
+        <td><img id="emailpic" src="../images/bg2.jpg"/></td>
+        </tr>
+        <tr>
+        <td>Username</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><input type="text" name="username"></td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Password</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><input type="password" name="password" id="password" onChange="passwordc()" onKeyUp="passwordc()"></td>
+        <td id="pstrength"><img id="passpic" src="../images/bg2.jpg"/></td>
+        </tr>
+        <tr>
+        <td>Re-enter Password</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><input type="password" name="rpassword" id="rpassword" onChange="rpassc()"></td>
+        <td><img id="rpasspic" src="../images/bg2.jpg"/></td>
+        </tr>
+        <tr>
+        <td>Gender</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><input style=" height:15px;width:40px" type="radio" value="gender" name="sex"> Male &nbsp; <input style=" height:15px;width:40px"  type="radio" value="female" name="gender"> Female</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Birth Date</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><select name="month" style="height:30px; width:40px">
+        	<script>
+				for(var i=1;i<13;i++)
+				{
+					document.write("<option value='"+i+"'>"+i+"</option>");	
+				}
+			</script>
+			</select>
+            <select name="date" style="height:30px; width:40px">
+            <script>
+				for(var i=1;i<32;i++)
+				{
+					document.write("<option value='"+i+"'>"+i+"</option>");	
+				}
+			</script>
+			</select>
+            <select name="year" style="height:30px; width:80px">
+            <script>
+				for(var i=1900;i<2015;i++)
+				{
+					document.write("<option value='"+i+"'>"+i+"</option>");	
+				}
+			</script>
+            </select>
+            </td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Address Line 1</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><input type="text" name="al1"></td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Address Line 2</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><input type="text" name="al2"></td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>City/Region</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><input type="text" name="city"></td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><input type="checkbox" id="chkAgree" onclick="goFurther()" style="width:25px; height:15px">I Agree with the terms and condition</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td><input type="submit" id="btnSubmit" value="Submit" style="height:30px; width:100px; border-radius:6px; border:1px solid;margin-left:40px; background-color:#0BA5C7; font-size:16px" disabled>
+         <input type="button" value="Clear" onClick="clearall()" style="height:30px; width:100px; border-radius:6px; border:1px solid;
+         margin-left:20px; background-color:#0BA5C7; font-size:16px"></td>
+        <td></td>
+        </tr>
+        </form>
+        
+        </table>
+    	
+        </div>      
+        <div style="height:1040px; width:300px; float:right; position:absolute; margin-left:500px;
+        margin-top:25px; border-left:#333 thin; border-left-style:inherit">
+        
+        
+        
+        </div>
+    
+	</div>
+</body>
+</html>
